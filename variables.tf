@@ -19,17 +19,17 @@ variable "devops_team_name" {
 
 variable "devops_project_name" {
   type        = string
-  description = "Name of the DevOps Project to create the pipeline permissions."
+  description = "Name of the DevOps Project where the pipeline is."
 }
 
 variable "devops_service_url" {
   type        = string
-  description = "The URL to the DevOps organization. 'https://dev.azure.com/Organization'"
+  description = "The URL to the DevOps organization. 'https://dev.azure.com/ORGANIZATION'"
 }
 
 variable "personal_access_token" {
   type        = string
-  description = "[Personal access token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows#create-a-pat) used for authentication to the Azure DevOps organization. Is only used during the oneshot deployment. You require the following scopes: `Code`=`Full`, `Environment`=`Read & manage`, `Identity`=`Read & manage`, `Pipeline Resources`=`Use and manage`, `Project and Team`=`Read, write, & manage`, `Security`=`Manage`, `Service Connections`=`Read, query, & manage`,`Variable Groups`=`Read, create, & manage`"
+  description = "[Personal access token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows#create-a-pat) used for authentication to the Azure DevOps organization. You require the following scopes: `Code`=`Full`, `Environment`=`Read & manage`, `Identity`=`Read & manage`, `Pipeline Resources`=`Use and manage`, `Project and Team`=`Read, write, & manage`, `Security`=`Manage`, `Service Connections`=`Read, query, & manage`,`Variable Groups`=`Read, create, & manage`"
   sensitive = true
 }
 
